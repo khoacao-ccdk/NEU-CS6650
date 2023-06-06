@@ -1,4 +1,4 @@
-import ResponseBody.SwipeResponse;
+import RequestBody.SwipeRequest;
 import com.google.gson.Gson;
 import java.util.List;
 import javax.servlet.*;
@@ -45,19 +45,34 @@ public class Swipe extends HttpServlet {
       return;
     }
 
-    response.setContentType("application/json");
-    response.setCharacterEncoding("UTF-8");
+    SwipeRequest swipeInfo;
+    try {
+      Gson gSon = new Gson();
+      //Parse request body from JSON to object
+      String s;
+      StringBuilder sb = new StringBuilder();
+      while ((s = request.getReader().readLine()) != null) {
+        sb.append(s);
+      }
+      swipeInfo = (SwipeRequest) gSon.fromJson(sb.toString(), SwipeRequest.class);
+
+    } catch (Exception e){
+      System.err.println(e);
+      response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+      response.getWriter().write("Missing body");
+      return;
+    }
+
+    //If there was no body - return a bad request response
+    if(swipeInfo == null){
+      response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+      response.getWriter().write("Parameters missing");
+      return;
+    }
+
     response.setStatus(HttpServletResponse.SC_CREATED);
-
-    //Return a dummy response based on type of swipe
-    String swipe = urlParts[1];
-    response.getWriter().write(
-        swipe.equals("left")
-            ? SwipeResponse.LEFT_SWIPE_RESPONSE
-            : SwipeResponse.RIGHT_SWIPE_RESPONSE
-    );
-
-    response.flushBuffer();
+    //Return a dummy response
+    response.getWriter().write("Written");
   }
 
   /**
@@ -70,4 +85,5 @@ public class Swipe extends HttpServlet {
     }
     return false;
   }
+
 }
