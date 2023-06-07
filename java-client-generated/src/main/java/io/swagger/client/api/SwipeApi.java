@@ -20,15 +20,9 @@ import io.swagger.client.Configuration;
 import io.swagger.client.Pair;
 import io.swagger.client.ProgressRequestBody;
 import io.swagger.client.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
 import java.io.IOException;
-
-
 import io.swagger.client.model.ResponseMsg;
 import io.swagger.client.model.SwipeDetails;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -118,11 +112,6 @@ public class SwipeApi {
         
         com.squareup.okhttp.Call call = swipeCall(body, leftorright, progressListener, progressRequestListener);
         return call;
-
-        
-        
-        
-        
     }
 
     /**
