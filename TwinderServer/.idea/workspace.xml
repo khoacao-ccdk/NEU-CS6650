@@ -10,47 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/TwinderServer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RequestBody/SwipeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Swipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-client-generated/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/Config/ClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/MultiThread/APITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/MultiThread/RequestThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/SingleThread/APITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/artifacts/Twinder.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/file.template.settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/fileTemplates/Servlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/runConfigurations/Tomcat_9_0_75.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/artifacts/Twinder/Twinder.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/RequestBody/SwipeRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/Swipe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/RequestBody/SwipeRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/Swipe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/web/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/web/web/WEB-INF/web.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/SwipeDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/MultiThread/APITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/MultiThread/RequestThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Output/Analyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Output/RequestOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Output/Writer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/SingleThread/APITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/SingleThread/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/Output/Analyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/Output/RequestOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/Output/Writer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/SingleThread/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-client-generated/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java-client-generated/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-client-generated/src/main/java/APITest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-client-generated/src/main/java/io/swagger/client/api/SwipeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/io/swagger/client/api/SwipeApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-client-generated/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/Config/ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-client-generated/src/main/java/MultiThread/APITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/MultiThread/APITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-client-generated/src/main/java/MultiThread/CSVWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-client-generated/src/main/java/MultiThread/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/MultiThread/RequestThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-client-generated/src/main/java/SingleThread/APITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-client-generated/src/main/java/SingleThread/APITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +89,7 @@
       <updated>1686084431096</updated>
       <workItem from="1686084432445" duration="7154000" />
       <workItem from="1686111315678" duration="706000" />
-      <workItem from="1686157648882" duration="1213000" />
+      <workItem from="1686157648882" duration="1813000" />
     </task>
     <servers />
   </component>
