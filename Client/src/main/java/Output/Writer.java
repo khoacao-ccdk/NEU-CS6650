@@ -15,6 +15,11 @@ public class Writer implements Runnable {
   public static final String CONCURRENT_FILE_NAME = "output_concurrent";
 
   /**
+   * CSV file name for concurrent run - part 2
+   */
+  public static final String CONCURRENT_FILE_NAME_2 = "output_concurrent_2";
+
+  /**
    * CSV file name for single threaded run
    */
   public static final String SINGLE_THREAD_FILE_NAME = "output_single_thread";
@@ -71,7 +76,7 @@ public class Writer implements Runnable {
       }
       if (row == RequestOutput.POISON_PILL) {
         terminatedThread++;
-        if (terminatedThread == APITest.NUM_THREADS) {
+        if (terminatedThread == numThreads) {
           try {
             this.output.close();
           } catch (IOException e) {

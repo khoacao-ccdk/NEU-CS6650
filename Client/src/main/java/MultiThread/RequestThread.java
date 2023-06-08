@@ -30,33 +30,25 @@ public class RequestThread implements Runnable {
    */
   public static final RequestThread PROCESS_PILL = new RequestThread();
 
-  /**
-   * Number of time the client thread will retry sending a thread until it deem the request as
-   * failed
-   */
-  public static final int NUM_RETRY = 5;
-  CloseableHttpClient httpclient = HttpClients.createDefault();
-  AtomicInteger successCounter;
-  AtomicInteger failCounter;
-  ArrayBlockingQueue<RequestThread> processingQueue;
-  ConcurrentLinkedQueue<RequestOutput> writeQueue;
+  private CloseableHttpClient httpclient;
+  private AtomicInteger successCounter;
+  private AtomicInteger failCounter;
+  private ArrayBlockingQueue<RequestThread> processingQueue;
 
   /**
    * @param successCounter  AtomicInteger object to count the number of successful requests
    * @param failCounter     AtomicInteger object to count the number of fail requests
-   * @param processingQueue an ArrayBlockingQueue to receive post requests
    * @oaram writeQueue a ConcurrentLinkedQueue to send results
    */
   public RequestThread(
       AtomicInteger successCounter,
       AtomicInteger failCounter,
-      ArrayBlockingQueue processingQueue,
-      ConcurrentLinkedQueue writeQueue
+      ArrayBlockingQueue processingQueue
   ) {
     this.successCounter = successCounter;
     this.failCounter = failCounter;
     this.processingQueue = processingQueue;
-    this.writeQueue = writeQueue;
+    this.httpclient= HttpClients.createDefault();
   }
 
   /**
@@ -78,7 +70,6 @@ public class RequestThread implements Runnable {
         e.printStackTrace();
       }
       if (signal == POISON_PILL || signal == null) {
-        writeQueue.offer(RequestOutput.POISON_PILL);
         return;
       }
       post();
@@ -103,7 +94,7 @@ public class RequestThread implements Runnable {
     long start, end;
 
     CloseableHttpResponse response = null;
-    for (int i = 0; i <= NUM_RETRY; i++) {
+    for (int i = 0; i <= ClientConfig.NUM_RETRY; i++) {
       try {
         start = System.currentTimeMillis();
         response = httpclient.execute(postReq);
@@ -126,12 +117,6 @@ public class RequestThread implements Runnable {
           //If the response is already successful, we don't need to try again
           if (response.getCode() == 201) {
             successCounter.getAndIncrement();
-            writeQueue.offer(new RequestOutput(
-                start,
-                "POST",
-                end - start,
-                response.getCode()
-            ));
             return;
           }
         } catch (IOException e) {

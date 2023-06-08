@@ -76,9 +76,6 @@ public class Analyzer {
       index = latencyList.size() - 1;
     }
     percentile99 = latencyList.get(index);
-
-    //Calculate throughput
-    throughput = numRow / TimeUnit.MILLISECONDS.toSeconds(total);
   }
 
   public double getMean() {

@@ -9,12 +9,17 @@ public final class ClientConfig {
   /**
    * The BaseURL to send request to server
    */
-  public static final String BASE_URL = "http://localhost:8080/TwinderServer";
+  public static final String BASE_URL = "http://35.91.170.224:8080/TwinderServer";
 
   /**
    * How many request the client should send to server
    */
   public static final int REQUEST_NUM = 500000;
+
+  /**
+   * Number of threads the client will use
+   */
+  public static final int NUM_THREADS = 6;
 
   /**
    * Swiper's id range
@@ -30,6 +35,12 @@ public final class ClientConfig {
    * Length of a randomly generated comment
    */
   public static final int COMMENT_LENGTH = 256;
+
+  /**
+   * Number of time the client thread will retry sending a thread until it deem the request as
+   * failed
+   */
+  public static final int NUM_RETRY = 5;
 
   private ClientConfig() {
   }

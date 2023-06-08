@@ -68,4 +68,15 @@ public class RequestOutput {
         String.valueOf(responseCode)
     };
   }
+
+  @Override
+  public String toString() {
+    final StringBuffer sb = new StringBuffer("RequestOutput{");
+    sb.append("startTime=").append(startTime);
+    sb.append(", requestType='").append(requestType).append('\'');
+    sb.append(", latency=").append(latency);
+    sb.append(", responseCode=").append(responseCode);
+    sb.append('}');
+    return sb.toString();
+  }
 }
