@@ -1,4 +1,4 @@
-package Output;
+package Common;
 
 public class RequestOutput {
 

@@ -1,6 +1,5 @@
-package Output;
+package Common;
 
-import MultiThread.APITest;
 import com.opencsv.CSVWriter;
 import java.io.BufferedWriter;
 import java.io.FileWriter;

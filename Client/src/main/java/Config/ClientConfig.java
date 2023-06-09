@@ -9,7 +9,7 @@ public final class ClientConfig {
   /**
    * The BaseURL to send request to server
    */
-  public static final String BASE_URL = "http://54.212.72.20:8080/TwinderServer";
+  public static final String BASE_URL = "http://localhost:8080/TwinderServer";
 
   /**
    * How many request the client should send to server

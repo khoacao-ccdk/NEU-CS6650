@@ -1,4 +1,4 @@
-package Output;
+package Common;
 
 import com.opencsv.CSVReader;
 import java.io.BufferedReader;
@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Analyzer {
 

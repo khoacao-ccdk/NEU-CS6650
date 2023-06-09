@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-package Config;
+package Common;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.Objects;

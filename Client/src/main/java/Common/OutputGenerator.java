@@ -1,7 +1,6 @@
-package Output;
+package Common;
 
 import Config.ClientConfig;
-import java.util.concurrent.TimeUnit;
 
 public class OutputGenerator {
 

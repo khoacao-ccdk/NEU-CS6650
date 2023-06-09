@@ -1,8 +1,6 @@
-package MultiThreadPart2;
+package Common;
 
 import Config.ClientConfig;
-import Config.SwipeDetails;
-import Output.RequestOutput;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -37,6 +35,8 @@ public class RequestThread implements Runnable {
   private ConcurrentLinkedQueue<RequestOutput> writeQueue;
 
   /**
+   * For Client Part 2 - Added a Write Queue to write data to csv
+   *
    * @param successCounter  AtomicInteger object to count the number of successful requests
    * @param failCounter     AtomicInteger object to count the number of fail requests
    * @param processingQueue an ArrayBlockingQueue to receive post requests
@@ -52,7 +52,26 @@ public class RequestThread implements Runnable {
     this.failCounter = failCounter;
     this.processingQueue = processingQueue;
     this.writeQueue = writeQueue;
-    this.httpclient= HttpClients.createDefault();
+    this.httpclient = HttpClients.createDefault();
+  }
+
+  /**
+   * For Client Part 1
+   *
+   * @param successCounter  AtomicInteger object to count the number of successful requests
+   * @param failCounter     AtomicInteger object to count the number of fail requests
+   * @param processingQueue an ArrayBlockingQueue to receive post requests
+   */
+  public RequestThread(
+      AtomicInteger successCounter,
+      AtomicInteger failCounter,
+      ArrayBlockingQueue processingQueue
+  ) {
+    this.successCounter = successCounter;
+    this.failCounter = failCounter;
+    this.processingQueue = processingQueue;
+    this.writeQueue = null;
+    this.httpclient = HttpClients.createDefault();
   }
 
   /**
@@ -122,12 +141,14 @@ public class RequestThread implements Runnable {
           //If the response is already successful, we don't need to try again
           if (response.getCode() == 201) {
             successCounter.getAndIncrement();
-            writeQueue.offer(new RequestOutput(
-                start,
-                "POST",
-                end - start,
-                response.getCode()
-            ));
+            if (writeQueue != null) {
+              writeQueue.offer(new RequestOutput(
+                  start,
+                  "POST",
+                  end - start,
+                  response.getCode()
+              ));
+            }
             return;
           }
         } catch (IOException e) {

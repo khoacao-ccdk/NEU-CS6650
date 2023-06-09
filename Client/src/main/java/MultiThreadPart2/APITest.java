@@ -1,10 +1,11 @@
 package MultiThreadPart2;
 
+import Common.RequestThread;
 import Config.ClientConfig;
-import Output.Analyzer;
-import Output.OutputGenerator;
-import Output.RequestOutput;
-import Output.Writer;
+import Common.Analyzer;
+import Common.OutputGenerator;
+import Common.RequestOutput;
+import Common.Writer;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
