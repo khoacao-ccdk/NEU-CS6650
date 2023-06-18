@@ -10,17 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Config/SwipeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Common/SwipeDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/MultiThread/APITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/MultiThread/APITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/MultiThread/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Common/RequestThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/MultiThreadPart2/APITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/MultiThreadPart2/APITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/MultiThreadPart2/RequestThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Output/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Common/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Output/OutputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Common/OutputGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Output/RequestOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Common/RequestOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Output/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Common/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Swipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Swipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +70,7 @@
       <workItem from="1686111315678" duration="706000" />
       <workItem from="1686157648882" duration="2414000" />
       <workItem from="1686333414541" duration="125000" />
+      <workItem from="1687115683230" duration="1485000" />
     </task>
     <servers />
   </component>

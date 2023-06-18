@@ -9,7 +9,7 @@ public final class ClientConfig {
   /**
    * The BaseURL to send request to server
    */
-  public static final String BASE_URL = "http://localhost:8080/TwinderServer";
+  public static final String BASE_URL = "http://35.89.197.243:8080/TwinderServer";
 
   /**
    * How many request the client should send to server
@@ -19,7 +19,7 @@ public final class ClientConfig {
   /**
    * Number of threads the client will use
    */
-  public static final int NUM_THREADS = 6;
+  public static final int NUM_THREADS = 100;
 
   /**
    * Swiper's id range

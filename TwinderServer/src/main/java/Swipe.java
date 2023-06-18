@@ -1,3 +1,4 @@
+import Config.ServerConfig;
 import RequestBody.SwipeRequest;
 import com.google.gson.Gson;
 import java.util.List;
@@ -54,9 +55,9 @@ public class Swipe extends HttpServlet {
       while ((s = request.getReader().readLine()) != null) {
         sb.append(s);
       }
-      swipeInfo = (SwipeRequest) gSon.fromJson(sb.toString(), SwipeRequest.class);
+      swipeInfo = gSon.fromJson(sb.toString(), SwipeRequest.class);
 
-    } catch (Exception e){
+    } catch (Exception e) {
       System.err.println(e);
       response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
       response.getWriter().write("Missing body");
@@ -64,9 +65,9 @@ public class Swipe extends HttpServlet {
     }
 
     //If there was no body - return a bad request response
-    if(swipeInfo == null){
+    if (swipeInfo == null || !isBodyValid(swipeInfo)) {
       response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-      response.getWriter().write("Parameters missing");
+      response.getWriter().write("Parameters missing/invalid");
       return;
     }
 
@@ -81,6 +82,24 @@ public class Swipe extends HttpServlet {
    */
   private boolean isUrlValid(String[] urlPath) {
     if (SWIPE_TYPE.contains(urlPath[1])) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * @param swipeInfo a SwipeRequest object contains information about the request's body
+   * @return true if the swiper id, swipee id, and comment length is within the range specified,
+   * false otherwise.
+   */
+  private boolean isBodyValid(SwipeRequest swipeInfo) {
+    int swiperId = swipeInfo.getSwiper();
+    int swipeeId = swipeInfo.getSwipee();
+    int messageLength = swipeInfo.getComment().length();
+
+    if (swiperId > 0 && swiperId <= ServerConfig.SWIPER_RANGE
+        && swipeeId > 0 && swipeeId <= ServerConfig.SWIPEE_RANGE
+        && messageLength <= ServerConfig.COMMENT_LENGTH) {
       return true;
     }
     return false;
