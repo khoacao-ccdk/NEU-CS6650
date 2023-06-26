@@ -1,4 +1,5 @@
 import Config.ServerConfig;
+import MessageQueue.QueueProducer;
 import RequestBody.SwipeRequest;
 import com.google.gson.Gson;
 import java.util.List;
@@ -12,6 +13,26 @@ import java.io.IOException;
  * @author Cody Cao
  */
 public class Swipe extends HttpServlet {
+  private QueueProducer producer;
+
+  /**
+   * Initialize the servlet
+   * @throws ServletException
+   */
+  @Override
+  public void init() throws ServletException {
+    super.init();
+    this.producer = new QueueProducer();
+  }
+
+  /**
+   * Tear down resources
+   */
+  @Override
+  public void destroy() {
+    super.destroy();
+    producer.destroy();
+  }
 
   //Swipe types supported by the server
   private static final List<String> SWIPE_TYPE = List.of("left", "right");
@@ -64,12 +85,15 @@ public class Swipe extends HttpServlet {
       return;
     }
 
-    //If there was no body - return a bad request response
+    //If there was no one - return a bad request response
     if (swipeInfo == null || !isBodyValid(swipeInfo)) {
       response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-      response.getWriter().write("Parameters missing/invalid");
+      response.getWriter().write("Body is missing/invalid");
       return;
     }
+
+    //Finally, send the request body to the queue
+    producer.send(swipeInfo);
 
     response.setStatus(HttpServletResponse.SC_CREATED);
     //Return a dummy response

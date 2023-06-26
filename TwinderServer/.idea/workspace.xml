@@ -10,9 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/TwinderServer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MessageQueue/ProducerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MessageQueue/QueueProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/output_concurrent_2" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/output_concurrent_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Common/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Common/RequestThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/TwinderServer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/TwinderServer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Swipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Swipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +79,12 @@
       <workItem from="1686111315678" duration="706000" />
       <workItem from="1686157648882" duration="2414000" />
       <workItem from="1686333414541" duration="125000" />
-      <workItem from="1687115683230" duration="1485000" />
+      <workItem from="1687115683230" duration="1793000" />
+      <workItem from="1687119350075" duration="1108000" />
+      <workItem from="1687647401042" duration="1143000" />
+      <workItem from="1687715033038" duration="7091000" />
+      <workItem from="1687732106755" duration="2563000" />
+      <workItem from="1687738816570" duration="1348000" />
     </task>
     <servers />
   </component>
