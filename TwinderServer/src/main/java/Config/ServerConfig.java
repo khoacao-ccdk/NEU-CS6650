@@ -33,13 +33,24 @@ public class ServerConfig {
   public static final String VHOST_NAME = "cs6650";
 
   /**
-   * Queue Name
+   * Username for vhost authentication
    */
-  public static final String QUEUE_NAME = "Swipe";
-
   public static final String USER_NAME = "Cody";
 
+  /**
+   * Password for vhost authentication
+   */
   public static final String PASSWORD = "CS6650-Lab";
+
+  /**
+   * Queue1 Name
+   */
+  public static final String QUEUE_1_NAME = "SwipeData1";
+
+  /**
+   * Queue2 Name
+   */
+  public static final String QUEUE_2_NAME = "SwipeData2";
 
   /**
    * Number of producer threads being allocated for the thread pool

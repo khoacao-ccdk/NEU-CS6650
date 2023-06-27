@@ -93,7 +93,13 @@ public class Swipe extends HttpServlet {
     }
 
     //Finally, send the request body to the queue
-    producer.send(swipeInfo);
+    SwipeRequest swipeToSend = new SwipeRequest(
+        urlParts[1],
+        swipeInfo.getSwiper(),
+        swipeInfo.getSwipee(),
+        swipeInfo.getComment()
+    );
+    producer.send(swipeToSend);
 
     response.setStatus(HttpServletResponse.SC_CREATED);
     //Return a dummy response

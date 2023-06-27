@@ -2,11 +2,7 @@ package MessageQueue;
 
 import Config.ServerConfig;
 import RequestBody.SwipeRequest;
-import com.rabbitmq.client.ShutdownSignalException;
-import com.rabbitmq.client.impl.CredentialsProvider;
-import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
-import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -24,8 +20,8 @@ import java.util.concurrent.TimeUnit;
 public class QueueProducer {
 
   private BlockingQueue<Channel> connectionPool;
-  ExecutorService threadPool;
-  Connection conn;
+  private ExecutorService threadPool;
+  private Connection conn;
 
   /**
    * Create a new QueueProducer object. This will also create a new connection pool that stores
@@ -49,9 +45,6 @@ public class QueueProducer {
       conn = factory.newConnection();
       for (int i = 0; i < ServerConfig.NUM_CONNECTIONS; i++) {
         Channel chan = conn.createChannel();
-
-        //Declare queue
-        chan.queueDeclare(ServerConfig.QUEUE_NAME, true, false, false, null);
         connectionPool.offer(chan);
       }
     } catch (Exception e) {

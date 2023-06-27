@@ -19,7 +19,7 @@ public final class ClientConfig {
   /**
    * How many request the client should send to server
    */
-  public static final int REQUEST_NUM = 10;
+  public static final int REQUEST_NUM = 100;
 
   /**
    * Number of threads the client will use

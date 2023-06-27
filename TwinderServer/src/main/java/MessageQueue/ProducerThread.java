@@ -35,17 +35,9 @@ public class ProducerThread implements Runnable {
       //Poll the connection from connection pool
       Channel channel = connectionPool.poll();
 
-      //Idempt key
-      final String corrId = UUID.randomUUID().toString();
-
-      String replyQueueName = channel.queueDeclare().getQueue();
-      AMQP.BasicProperties props = new AMQP.BasicProperties
-          .Builder()
-          .correlationId(corrId)
-          .replyTo(replyQueueName)
-          .build();
-
-      channel.basicPublish("", ServerConfig.QUEUE_NAME, null, message);
+      //Public message to the 2 queues
+      channel.basicPublish("", ServerConfig.QUEUE_2_NAME, null, message);
+      channel.basicPublish("", ServerConfig.QUEUE_1_NAME, null, message);
 
       //Put the connection back to the pool when finished
       connectionPool.offer(channel);
