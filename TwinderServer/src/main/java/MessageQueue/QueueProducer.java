@@ -37,6 +37,7 @@ public class QueueProducer {
     //Config connections
     ConnectionFactory factory = new ConnectionFactory();
     factory.setHost(ServerConfig.QUEUE_HOST);
+    factory.setPort(ServerConfig.QUEUE_PORT);
     factory.setVirtualHost(ServerConfig.VHOST_NAME);
     factory.setUsername(ServerConfig.USER_NAME);
     factory.setPassword(ServerConfig.PASSWORD);

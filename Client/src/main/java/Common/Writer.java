@@ -16,7 +16,7 @@ public class Writer implements Runnable {
   /**
    * CSV file name for concurrent run - part 2
    */
-  public static final String CONCURRENT_FILE_NAME_2 = "output_concurrent_2";
+  public static final String CONCURRENT_FILE_NAME_2 = "output_concurrent_2.csv";
 
   /**
    * CSV file name for single threaded run

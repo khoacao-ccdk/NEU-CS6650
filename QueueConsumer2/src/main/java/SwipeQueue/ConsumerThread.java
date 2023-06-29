@@ -37,11 +37,6 @@ public class ConsumerThread implements Runnable {
     try {
       String message = new String(delivery.getBody(), "UTF-8");
 
-      System.out.println(String.format("Threads num %d received '%s':'%s'",
-          Thread.currentThread().getId(),
-          delivery.getEnvelope().getRoutingKey(),
-          message));
-
       Swipe swipeInfo = new Gson().fromJson(message, Swipe.class);
       String swipeType = swipeInfo.getSwipeType();
       if (swipeType.equals("right")) {

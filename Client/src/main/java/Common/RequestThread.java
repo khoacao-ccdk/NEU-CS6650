@@ -111,7 +111,7 @@ public class RequestThread implements Runnable {
 
     //Set up request
     HttpPost postReq = new HttpPost(
-        String.format("%s/swipe/%s", ClientConfig.LOCAL_BASE_URL, leftorright));
+        String.format("%s/swipe/%s", ClientConfig.REMOTE_BASE_URL, leftorright));
     postReq.setEntity(new StringEntity(getRandomSwipeBody()));
     postReq.setHeader("Accept", "application/json");
     postReq.setHeader("Content-type", "application/json");

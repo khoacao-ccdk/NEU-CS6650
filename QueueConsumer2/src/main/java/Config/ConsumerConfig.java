@@ -9,12 +9,17 @@ public class ConsumerConfig {
   /**
    * Number of connections opened towards the message queue host - also used to allocate threads
    */
-  public static final int NUM_CONNECTIONS = 10;
+  public static final int NUM_CONNECTIONS = 50;
 
   /**
    * RabbitMQ Host
    */
-  public static final String QUEUE_HOST = "localhost";
+  public static final String QUEUE_HOST = "50.112.70.179";
+
+  /**
+   * RabbitMQ Port
+   */
+  public static final int QUEUE_PORT = 5672;
 
   /**
    * Virtual Host Name

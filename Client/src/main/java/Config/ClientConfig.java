@@ -9,7 +9,7 @@ public final class ClientConfig {
   /**
    * The BaseURL to send request to server
    */
-  public static final String REMOTE_BASE_URL = "http://44.236.118.30:8080/TwinderServer";
+  public static final String REMOTE_BASE_URL = "http://TwinderServer-ELB-1396322766.us-west-2.elb.amazonaws.com:8080/TwinderServer";
 
   /**
    * The BaseURL to send request to server
@@ -19,7 +19,7 @@ public final class ClientConfig {
   /**
    * How many request the client should send to server
    */
-  public static final int REQUEST_NUM = 100;
+  public static final int REQUEST_NUM = 50000;
 
   /**
    * Number of threads the client will use

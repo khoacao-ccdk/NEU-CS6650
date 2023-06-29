@@ -43,11 +43,6 @@ public class ConsumerThread implements Runnable {
     try {
       String message = new String(delivery.getBody(), "UTF-8");
 
-      System.out.println(String.format("Threads num %d received '%s':'%s'",
-          Thread.currentThread().getId(),
-          delivery.getEnvelope().getRoutingKey(),
-          message));
-
       //Deserialize message to object
       Swipe swipeInfo = new Gson().fromJson(message, Swipe.class);
       String swipeType = swipeInfo.getSwipeType();
@@ -65,7 +60,6 @@ public class ConsumerThread implements Runnable {
       int swiperId = swipeInfo.getSwiper();
       AtomicInteger count = countMap.getOrDefault(swiperId, new AtomicInteger(0));
       count.incrementAndGet();
-      countMap.putIfAbsent(swiperId, count);
 
       //Acknowledge the message after performing computation
       chan.basicAck(delivery.getEnvelope().getDeliveryTag(), false);

@@ -32,6 +32,7 @@ public class SwipeConsumer {
     //Setup connection pool
     ConnectionFactory factory = new ConnectionFactory();
     factory.setHost(ConsumerConfig.QUEUE_HOST);
+    factory.setPort(ConsumerConfig.QUEUE_PORT);
     factory.setVirtualHost(ConsumerConfig.VHOST_NAME);
     factory.setUsername(ConsumerConfig.USER_NAME);
     factory.setPassword(ConsumerConfig.PASSWORD);
