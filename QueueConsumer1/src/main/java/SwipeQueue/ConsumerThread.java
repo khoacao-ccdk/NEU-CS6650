@@ -58,8 +58,10 @@ public class ConsumerThread implements Runnable {
 
       //Update like/dislike number
       int swiperId = swipeInfo.getSwiper();
+      if(!countMap.containsKey(swiperId)){
+        countMap.put(swiperId, new AtomicInteger(0));
+      }
       AtomicInteger count = countMap.getOrDefault(swiperId, new AtomicInteger(0));
-      count.incrementAndGet();
 
       //Acknowledge the message after performing computation
       chan.basicAck(delivery.getEnvelope().getDeliveryTag(), false);

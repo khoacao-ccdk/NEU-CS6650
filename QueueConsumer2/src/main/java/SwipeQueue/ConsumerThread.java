@@ -56,9 +56,8 @@ public class ConsumerThread implements Runnable {
           swipeeList.poll();
         }
         swipeeList.offer(swipeeId);
-
-        //Acknowledge the message after performing computation
       }
+      //Acknowledge the message after performing computation
       chan.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
     } catch (Exception e) {
       //In case an exception was thrown, reject the message and let RabbitMQ knows that it's failed to be consumed
