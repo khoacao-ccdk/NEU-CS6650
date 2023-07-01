@@ -10,5 +10,5 @@ This is a repository for CS 6650 - Building a Scalable Distributed System at Nor
 ## 3. Consumer 1 UML
 ![Consumer 1 UML](Consumer1-UML.png)
 
-## 4. Consumer 1 UML
+## 4. Consumer 2 UML
 ![Consumer 2 UML](Consumer2-UML.png)
