@@ -20,7 +20,7 @@ public class ServerConfig {
   /**
    * Number of connections opened towards the message queue host
    */
-  public static final int NUM_CONNECTIONS = 50;
+  public static final int NUM_CONNECTIONS = 100;
 
   /**
    * RabbitMQ Host

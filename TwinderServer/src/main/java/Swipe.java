@@ -99,8 +99,8 @@ public class Swipe extends HttpServlet {
         swipeInfo.getSwipee(),
         swipeInfo.getComment()
     );
-    producer.send(swipeToSend);
 
+    producer.send(swipeToSend);
     response.setStatus(HttpServletResponse.SC_CREATED);
     //Return a dummy response
     response.getWriter().write("Written");
