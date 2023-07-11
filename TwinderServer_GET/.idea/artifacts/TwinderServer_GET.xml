@@ -1,0 +1,40 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TwinderServer_GET">
+    <output-path>$PROJECT_DIR$/out/artifacts/TwinderServer_GET</output-path>
+    <root id="archive" name="TwinderServer_GET.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TwinderServer_GET" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:s3:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:aws-xml-protocol:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:aws-query-protocol:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:protocol-core:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:arns:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:profiles:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:crt-core:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:sdk-core:2.20.101" />
+          <element id="library" level="project" name="Maven: org.reactivestreams:reactive-streams:1.0.3" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:auth:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.eventstream:eventstream:1.0.1" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:http-client-spi:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:regions:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:annotations:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:utils:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:aws-core:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:metrics-spi:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:json-utils:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:third-party-jackson-core:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:endpoints-spi:2.20.101" />
+          <element id="library" level="project" name="Maven: software.amazon.awssdk:url-connection-client:2.20.101" />
+          <element id="library" level="project" name="Maven: com.amazonaws:aws-lambda-java-core:1.2.0" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.10.1" />
+          <element id="library" level="project" name="Maven: com.rabbitmq:amqp-client:5.18.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.36" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="TwinderServer_GET/web/Web" />
+    </root>
+  </artifact>
+</component>

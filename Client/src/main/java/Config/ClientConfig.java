@@ -22,7 +22,7 @@ public final class ClientConfig {
   /**
    * Number of threads the client will use
    */
-  public static final int NUM_THREADS = 100;
+  public static final int NUM_THREADS = 200;
 
   /**
    * Swiper's id range

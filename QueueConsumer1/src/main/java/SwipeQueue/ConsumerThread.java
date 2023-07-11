@@ -1,6 +1,7 @@
 package SwipeQueue;
 
-import Body.Swipe;
+import Data.Swipe;
+import Config.AWSDependencyFactory;
 import Config.ConsumerConfig;
 import com.google.gson.Gson;
 import com.rabbitmq.client.Channel;
@@ -8,8 +9,8 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.DeliverCallback;
 import java.io.IOException;
 import java.util.Map;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
+import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
 public class ConsumerThread implements Runnable {
 
@@ -19,14 +20,14 @@ public class ConsumerThread implements Runnable {
   /**
    * Constructs a new consumer thread to handle messages
    *
-   * @param conn          a Connection object represents the connection to the queue
-   * @param likeMap a ConcurrentHashMap represents user's likes
+   * @param conn       a Connection object represents the connection to the queue
+   * @param likeMap    a ConcurrentHashMap represents user's likes
    * @param dislikeMap a ConcurrentHashMap represents user's dislikes
    */
   public ConsumerThread(Connection conn,
       Map<Integer, AtomicInteger> likeMap,
       Map<Integer, AtomicInteger> dislikeMap
-      ) {
+  ) {
     this.likeMap = likeMap;
     this.dislikeMap = dislikeMap;
     try {
@@ -51,14 +52,13 @@ public class ConsumerThread implements Runnable {
       //Get map based on swipe type
       if (swipeType.equals("left")) {
         countMap = dislikeMap;
-      }
-      else {
+      } else {
         countMap = likeMap;
       }
 
       //Update like/dislike number
       int swiperId = swipeInfo.getSwiper();
-      if(!countMap.containsKey(swiperId)){
+      if (!countMap.containsKey(swiperId)) {
         countMap.put(swiperId, new AtomicInteger(0));
       }
       AtomicInteger count = countMap.getOrDefault(swiperId, new AtomicInteger(0));
@@ -75,12 +75,17 @@ public class ConsumerThread implements Runnable {
   public void run() {
     try {
       //Bind the queue to exchange
-      chan.queueDeclare(ConsumerConfig.QUEUE_NAME, false, false, false, null);
+      chan.queueDeclare(ConsumerConfig.QUEUE_NAME,
+          ConsumerConfig.QUEUE_DURABILITY,
+          false,
+          false,
+          null);
 
       //Start listening for messages
-      boolean basicAck = false;
-      chan.basicConsume(ConsumerConfig.QUEUE_NAME, basicAck, callback, (consumerTag -> {
-      }));
+      chan.basicConsume(ConsumerConfig.QUEUE_NAME,
+          ConsumerConfig.QUEUE_AUTO_ACK, callback,
+          (consumerTag -> {
+          }));
 
       System.out.println(String.format("Threads num %d running on channel %d",
           Thread.currentThread().getId(),

@@ -37,6 +37,20 @@ public class ConsumerConfig {
    */
   public static final String QUEUE_NAME = "SwipeData1";
 
+  /**
+   * Queue durability
+   */
+  public static final boolean QUEUE_DURABILITY = true;
+
+  /**
+   * Queue auto acknowledgement - currently not auto
+   */
+  public static final boolean QUEUE_AUTO_ACK = false;
+
+  /**
+   * DynamoDB table name
+   */
+  public static final String DYNAMO_TABLE_NAME = "TwinderUserStats";
 
   /**
    * Private constructor since no object should be constructed for this class
