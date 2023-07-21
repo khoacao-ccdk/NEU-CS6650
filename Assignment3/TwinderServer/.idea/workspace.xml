@@ -9,52 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/artifacts/TwinderServer_GET.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/runConfigurations/TwinderServer_GET.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/runConfigurations/_template__of_Local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/out/artifacts/TwinderServer_GET/TwinderServer-GET.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/out/artifacts/TwinderServer_GET/TwinderServer_GET.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/src/main/java/Config/ServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/src/main/java/Matches.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/src/main/java/Stats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/web/META-INF/context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer-GET/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/runConfigurations/TwinderServer_GET.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/out/artifacts/TwinderServer_GET/TwinderServer_GET.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Matches.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Stats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/artifacts/Client2_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/artifacts/Client_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/artifacts/Client_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/artifacts/Client2_jar/Client.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/output_concurrent_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/output_concurrent_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/artifacts/TwinderServer_GET.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/TwinderServer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/TwinderServer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TwinderServer/TwinderServer.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TwinderServer/TwinderServer.war" afterDir="false" />
-    </list>
+    <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +23,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -85,25 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/TwinderServer-GET",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15625",
-    "project.structure.side.proportion": "0.17844728",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/Assignment3/TwinderServer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.17844728&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -140,6 +95,10 @@
       <workItem from="1688942938606" duration="2890000" />
       <workItem from="1688946002471" duration="2650000" />
       <workItem from="1688948845573" duration="688000" />
+      <workItem from="1689546835665" duration="3671000" />
+      <workItem from="1689720605747" duration="241000" />
+      <workItem from="1689820135225" duration="1901000" />
+      <workItem from="1689886773203" duration="3628000" />
     </task>
     <servers />
   </component>

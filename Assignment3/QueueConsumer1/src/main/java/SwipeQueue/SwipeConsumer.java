@@ -1,19 +1,15 @@
 package SwipeQueue;
 
-import Config.AWSDependencyFactory;
 import Config.ConsumerConfig;
-import Data.RightSwipe;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import java.io.IOException;
 import java.util.Map;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
-import software.amazon.awssdk.enhanced.dynamodb.DynamoDbAsyncTable;
 
 /**
  * SwipeConsumer class - used to consume swipe data from queue
@@ -22,22 +18,13 @@ import software.amazon.awssdk.enhanced.dynamodb.DynamoDbAsyncTable;
  */
 public class SwipeConsumer {
 
-  private Map<Integer, AtomicInteger> likeMap, dislikeMap;
   private Connection conn;
   private ExecutorService threadPool;
 
- // private DynamoDbAsyncTable<RightSwipe> likeTable = new ;
-
   /**
    * Construct a new SwipeConsumer
-   *
-   * @param likeMap    a ConcurrentHashMap that stores information about a user's likes
-   * @param dislikeMap a ConcurrentHashMap that stores information about a user's dislikes
    */
-  public SwipeConsumer(Map<Integer, AtomicInteger> likeMap,
-      Map<Integer, AtomicInteger> dislikeMap) {
-    this.likeMap = likeMap;
-    this.dislikeMap = dislikeMap;
+  public SwipeConsumer() {
 
     //Setup connection pool
     ConnectionFactory factory = new ConnectionFactory();
@@ -46,8 +33,6 @@ public class SwipeConsumer {
     factory.setVirtualHost(ConsumerConfig.VHOST_NAME);
     factory.setUsername(ConsumerConfig.USER_NAME);
     factory.setPassword(ConsumerConfig.PASSWORD);
-
-    //likeTable = AWSDependencyFactory.dynamoDbClient()
 
     try {
       this.conn = factory.newConnection();
@@ -63,7 +48,7 @@ public class SwipeConsumer {
   public void start() {
     threadPool = Executors.newFixedThreadPool(ConsumerConfig.NUM_CONNECTIONS);
     for (int i = 0; i < ConsumerConfig.NUM_CONNECTIONS; i++) {
-      threadPool.execute(new ConsumerThread(conn, likeMap, dislikeMap));
+      threadPool.execute(new ConsumerThread(conn));
     }
   }
 

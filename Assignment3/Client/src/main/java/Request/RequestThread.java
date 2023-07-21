@@ -76,7 +76,7 @@ public class RequestThread implements Runnable {
     //Set up request
     AsyncRequestProducer postReq = AsyncRequestBuilder.post()
         .setUri(String.format("%s/swipe/%s",
-            ClientConfig.REMOTE_BASE_URL,
+            ClientConfig.LOCAL_BASE_URL,
             leftorright))
         .addHeader("Accept", "application/json")
         .addHeader("Content-type", "application/json")

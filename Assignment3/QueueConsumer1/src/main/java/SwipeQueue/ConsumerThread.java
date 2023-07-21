@@ -3,6 +3,7 @@ package SwipeQueue;
 import Data.Swipe;
 import Config.AWSDependencyFactory;
 import Config.ConsumerConfig;
+import DynamoDB.SwipeCounterWriter;
 import com.google.gson.Gson;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -15,21 +16,13 @@ import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 public class ConsumerThread implements Runnable {
 
   private Channel chan;
-  private Map<Integer, AtomicInteger> likeMap, dislikeMap;
 
   /**
    * Constructs a new consumer thread to handle messages
    *
-   * @param conn       a Connection object represents the connection to the queue
-   * @param likeMap    a ConcurrentHashMap represents user's likes
-   * @param dislikeMap a ConcurrentHashMap represents user's dislikes
+   * @param conn a Connection object represents the connection to the queue
    */
-  public ConsumerThread(Connection conn,
-      Map<Integer, AtomicInteger> likeMap,
-      Map<Integer, AtomicInteger> dislikeMap
-  ) {
-    this.likeMap = likeMap;
-    this.dislikeMap = dislikeMap;
+  public ConsumerThread(Connection conn) {
     try {
       this.chan = conn.createChannel();
     } catch (IOException e) {
@@ -47,21 +40,11 @@ public class ConsumerThread implements Runnable {
       //Deserialize message to object
       Swipe swipeInfo = new Gson().fromJson(message, Swipe.class);
       String swipeType = swipeInfo.getSwipeType();
-      Map<Integer, AtomicInteger> countMap;
-
-      //Get map based on swipe type
-      if (swipeType.equals("left")) {
-        countMap = dislikeMap;
-      } else {
-        countMap = likeMap;
-      }
-
-      //Update like/dislike number
       int swiperId = swipeInfo.getSwiper();
-      if (!countMap.containsKey(swiperId)) {
-        countMap.put(swiperId, new AtomicInteger(0));
-      }
-      AtomicInteger count = countMap.getOrDefault(swiperId, new AtomicInteger(0));
+
+      //Update the dynamodb's counter
+      SwipeCounterWriter writer = new SwipeCounterWriter(swiperId, swipeType);
+      writer.updateCounter();
 
       //Acknowledge the message after performing computation
       chan.basicAck(delivery.getEnvelope().getDeliveryTag(), false);

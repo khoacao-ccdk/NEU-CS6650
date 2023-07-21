@@ -5,12 +5,12 @@ public class ServerConfig {
   /**
    * Swiper's id range
    */
-  public static final int SWIPER_RANGE = 5000;
+  public static final int SWIPER_RANGE = 50000;
 
   /**
    * Swipee's id range
    */
-  public static final int SWIPEE_RANGE = 1000000;
+  public static final int SWIPEE_RANGE = SWIPER_RANGE;
 
   /**
    * Length of a randomly generated comment
@@ -24,8 +24,10 @@ public class ServerConfig {
 
   /**
    * RabbitMQ Host
+   *
+   * Remote host IP: 50.112.70.179
    */
-  public static final String QUEUE_HOST = "50.112.70.179";
+  public static final String QUEUE_HOST = "localhost";
 
   /**
    * RabbitMQ Port
@@ -57,10 +59,7 @@ public class ServerConfig {
    */
   public static final String QUEUE_2_NAME = "SwipeData2";
 
-  /**
-   * Number of producer threads being allocated for the thread pool
-   */
-  public static final int NUM_PRODUCER_THREAD = NUM_CONNECTIONS;
+  public static final boolean MESSAGE_PERSISTENT = true;
 
   /**
    * Private constructor since no instance of this class is needed

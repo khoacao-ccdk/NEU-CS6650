@@ -9,8 +9,10 @@ public class ConsumerConfig {
 
   /**
    * RabbitMQ Host
+   *
+   * AWS Host: "50.112.70.179"
    */
-  public static final String QUEUE_HOST = "50.112.70.179";
+  public static final String QUEUE_HOST = "localhost";
 
   /**
    * RabbitMQ Port
@@ -50,7 +52,12 @@ public class ConsumerConfig {
   /**
    * DynamoDB table name
    */
-  public static final String DYNAMO_TABLE_NAME = "TwinderUserStats";
+  public static final String DYNAMO_TABLE_NAME = "TwinderUserSwipeCounter";
+
+  /**
+   * Primary Key field name
+   */
+  public static final String DYNAMO_PK = "SwiperId";
 
   /**
    * Private constructor since no object should be constructed for this class

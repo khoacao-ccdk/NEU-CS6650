@@ -68,7 +68,7 @@ public class Analyzer {
         : (float) ((latencyList.get(mid) + latencyList.get(mid + 1)) / 2.0);
 
     //Calculate 99th percentile
-    int index = (int) Math.ceil((percentile / 100) * latencyList.size()) - 1;
+    int index = (int) Math.ceil((1.0 * percentile / 100) * latencyList.size()) - 1;
     if (index < 0) {
       index = 0;
     } else if (index >= latencyList.size()) {

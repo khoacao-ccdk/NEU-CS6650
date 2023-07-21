@@ -14,10 +14,12 @@ public final class ClientConfig {
    */
   public static final String REMOTE_BASE_URL = "http://TwinderServer-ELB-1396322766.us-west-2.elb.amazonaws.com:8080/TwinderServer";
 
+  public static final String LOCAL_BASE_URL = "http://localhost:8080/TwinderServer";
+
   /**
    * How many request the client should send to server
    */
-  public static final int REQUEST_NUM = 500000;
+  public static final int REQUEST_NUM = 100000;
 
   /**
    * Number of threads the client will use
@@ -27,12 +29,12 @@ public final class ClientConfig {
   /**
    * Swiper's id range
    */
-  public static final int SWIPER_RANGE = 100;
+  public static final int SWIPER_RANGE = 10;
 
   /**
    * Swipee's id range
    */
-  public static final int SWIPEE_RANGE = 50000;
+  public static final int SWIPEE_RANGE = SWIPER_RANGE;
 
   /**
    * Length of a randomly generated comment
