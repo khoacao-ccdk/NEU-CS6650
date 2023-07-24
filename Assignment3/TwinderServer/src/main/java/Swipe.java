@@ -150,10 +150,6 @@ public class Swipe extends HttpServlet {
         //Publish message to queue 1
         channel.basicPublish("", ServerConfig.QUEUE_1_NAME, MessageProperties.PERSISTENT_TEXT_PLAIN, message);
 
-        //Only publish right swipes to queue 2
-        if(swipeInfo.getSwipeType().equals("right")) {
-            channel.basicPublish("", ServerConfig.QUEUE_2_NAME, MessageProperties.PERSISTENT_TEXT_PLAIN, message);
-        }
         producer.putConnection(channel);
     }
 

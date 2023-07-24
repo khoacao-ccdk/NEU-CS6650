@@ -9,7 +9,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="" />
+    <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/DynamoDB/MatchListWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/output_concurrent_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/output_concurrent_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Request/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Request/RequestThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/.idea/artifacts/QueueConsumer1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/.idea/artifacts/QueueConsumer1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/out/artifacts/QueueConsumer1_jar/QueueConsumer1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/out/artifacts/QueueConsumer1_jar/QueueConsumer1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Config/AWSDependencyFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Config/ConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Config/ConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/DynamoDB/SwipeCounterWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/DynamoDB/SwipeCounterWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/ConsumerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/ConsumerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/SwipeConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/SwipeConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Body/Swipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Data/Swipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Config/ConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Config/ConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/ConsumerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/ConsumerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/SwipeConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/SwipeConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TwinderServer/TwinderServer.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TwinderServer/TwinderServer.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MessageQueue/QueueProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MessageQueue/QueueProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Swipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Swipe.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,32 +62,33 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="2QqcDK5LjfSuVn9l3seLCEeOC5o" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/Assignment3/TwinderServer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.17844728&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/Assignment3/TwinderServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15625",
+    "project.structure.side.proportion": "0.17844728",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -99,6 +129,9 @@
       <workItem from="1689720605747" duration="241000" />
       <workItem from="1689820135225" duration="1901000" />
       <workItem from="1689886773203" duration="3628000" />
+      <workItem from="1689972117919" duration="1172000" />
+      <workItem from="1690143108807" duration="3854000" />
+      <workItem from="1690222732040" duration="50000" />
     </task>
     <servers />
   </component>
@@ -118,5 +151,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>

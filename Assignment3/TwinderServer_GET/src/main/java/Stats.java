@@ -1,4 +1,5 @@
 import Config.ServerConfig;
+import DynamoDB.DAO;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,28 +36,31 @@ public class Stats extends HttpServlet {
       return;
     }
 
-    /**
-     * TODO:
-     * 1. Perform connection to the storage
-     * 2. Verify that the UserId is in the storage
-     *    a. If not, return code 404 - User not found
-     *    b. If yes, return in this format:
-     *      {
-     *        "numLikes": 72,
-     *        "numDislikes": 489
-     *      }
-     */
+    //Retrieve from DynamoDB
+    int userId = Integer.parseInt(urlParts[1]);
+    DAO dao = new DAO(userId);
+    int[] stats = dao.getStats();
 
+    String responseMsg;
 
+    //In case the given userId is not in dynamoDB
+    if(stats == null) {
+      response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+      responseMsg = "User not found";
+      response.getWriter().write(responseMsg);
+    }
+    else {
+      response.setStatus(HttpServletResponse.SC_OK);
+      response.setContentType("application/json");
 
-    response.setStatus(HttpServletResponse.SC_OK);
-    response.setContentType("application/json");
+      //Build the response message
+      responseMsg = new StringBuilder("{")
+          .append("\"numLlikes\": ").append(stats[0])
+          .append(", \"numDislikes\": ").append(stats[1])
+          .append("}").toString();
 
-    String tempResponse = "{"
-        + "\"numLlikes\": 72,"
-        + "\"numDislikes\": 489"
-        + "}";
-    response.getWriter().write(tempResponse);
+    }
+    response.getWriter().write(responseMsg);
   }
 
 

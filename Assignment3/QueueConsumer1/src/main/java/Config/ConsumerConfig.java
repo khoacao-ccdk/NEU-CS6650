@@ -3,16 +3,21 @@ package Config;
 public class ConsumerConfig {
 
   /**
+   * Maximum number of potential matches being stored
+   */
+  public static final int MAX_POTENTIAL_MATCHES = 100;
+
+  /**
    * Number of connections opened towards the message queue host - also used to allocate threads
    */
-  public static final int NUM_CONNECTIONS = 10;
+  public static final int NUM_CONNECTIONS = 50;
 
   /**
    * RabbitMQ Host
    *
    * AWS Host: "50.112.70.179"
    */
-  public static final String QUEUE_HOST = "localhost";
+  public static final String QUEUE_HOST = "50.112.70.179";
 
   /**
    * RabbitMQ Port
@@ -52,12 +57,32 @@ public class ConsumerConfig {
   /**
    * DynamoDB table name
    */
-  public static final String DYNAMO_TABLE_NAME = "TwinderUserSwipeCounter";
+  public static final String DYNAMO_TABLE_NAME = "SwipeData";
 
   /**
    * Primary Key field name
    */
   public static final String DYNAMO_PK = "SwiperId";
+
+  /**
+   * a String represents the count left swipe column
+   */
+  public static final String LEFT_SWIPE_COL_NAME = "LeftSwipe";
+
+  /**
+   * a String represents the count right swipe column
+   */
+  public static final String RIGHT_SWIPE_COL_NAME = "RightSwipe";
+
+  /**
+   * a String represents the potential matches
+   */
+  public static final String MATCHES_COL_NAME = "Matches";
+
+  /**
+   * Number of elements being sent per dynamodb update transaction
+   */
+  public static final int NUM_REQ_PER_TRANSACTION = 100;
 
   /**
    * Private constructor since no object should be constructed for this class

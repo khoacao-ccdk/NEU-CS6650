@@ -27,7 +27,7 @@ public class ServerConfig {
    *
    * Remote host IP: 50.112.70.179
    */
-  public static final String QUEUE_HOST = "localhost";
+  public static final String QUEUE_HOST = "50.112.70.179";
 
   /**
    * RabbitMQ Port
@@ -53,11 +53,6 @@ public class ServerConfig {
    * Queue1 Name
    */
   public static final String QUEUE_1_NAME = "SwipeData1";
-
-  /**
-   * Queue2 Name
-   */
-  public static final String QUEUE_2_NAME = "SwipeData2";
 
   public static final boolean MESSAGE_PERSISTENT = true;
 

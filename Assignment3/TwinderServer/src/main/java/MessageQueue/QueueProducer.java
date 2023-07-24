@@ -56,7 +56,6 @@ public class QueueProducer {
             for (int i = 0; i < ServerConfig.NUM_CONNECTIONS; i++) {
                 Channel chan = conn.createChannel();
                 chan.queueDeclare(ServerConfig.QUEUE_1_NAME, ServerConfig.MESSAGE_PERSISTENT, false, false, null);
-                chan.queueDeclare(ServerConfig.QUEUE_2_NAME, ServerConfig.MESSAGE_PERSISTENT, false, false, null);
                 connectionPool.offer(chan);
             }
         } catch (Exception e) {

@@ -19,7 +19,7 @@ public final class ClientConfig {
   /**
    * How many request the client should send to server
    */
-  public static final int REQUEST_NUM = 100000;
+  public static final int REQUEST_NUM = 50000;
 
   /**
    * Number of threads the client will use
@@ -29,7 +29,7 @@ public final class ClientConfig {
   /**
    * Swiper's id range
    */
-  public static final int SWIPER_RANGE = 10;
+  public static final int SWIPER_RANGE = 50000;
 
   /**
    * Swipee's id range

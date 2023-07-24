@@ -1,30 +1,32 @@
 package SwipeQueue;
 
-import Data.Swipe;
-import Config.AWSDependencyFactory;
 import Config.ConsumerConfig;
-import DynamoDB.SwipeCounterWriter;
+import Data.Swipe;
+import Data.UserSwipeData;
 import com.google.gson.Gson;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.DeliverCallback;
 import java.io.IOException;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentMap;
 
 public class ConsumerThread implements Runnable {
 
   private Channel chan;
+  private BlockingQueue<Integer> data;
+  private ConcurrentMap<Integer, UserSwipeData> dataMap;
 
   /**
    * Constructs a new consumer thread to handle messages
    *
    * @param conn a Connection object represents the connection to the queue
    */
-  public ConsumerThread(Connection conn) {
+  public ConsumerThread(Connection conn, BlockingQueue<Integer> data, ConcurrentMap<Integer, UserSwipeData> dataMap) {
     try {
       this.chan = conn.createChannel();
+      this.data = data;
+      this.dataMap = dataMap;
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -39,12 +41,23 @@ public class ConsumerThread implements Runnable {
 
       //Deserialize message to object
       Swipe swipeInfo = new Gson().fromJson(message, Swipe.class);
-      String swipeType = swipeInfo.getSwipeType();
-      int swiperId = swipeInfo.getSwiper();
 
-      //Update the dynamodb's counter
-      SwipeCounterWriter writer = new SwipeCounterWriter(swiperId, swipeType);
-      writer.updateCounter();
+      //Updating data
+      int swiperId = swipeInfo.getSwiper();
+      UserSwipeData swipeData = dataMap.getOrDefault(swiperId, new UserSwipeData(swiperId));
+      String swipeType = swipeInfo.getSwipeType();
+      if(swipeType.equals("left")){
+        swipeData.incLeftSwipe();
+      } else {
+        //Update potential match and increment right swipe count
+        swipeData.incRightSwipe();
+        int swipeeId = swipeInfo.getSwipee();
+        swipeData.addPotentialMatch(swipeeId);
+      }
+      dataMap.putIfAbsent(swiperId, swipeData);
+
+      //Put swipe data to queue to update DynamoDB
+      data.offer(swiperId);
 
       //Acknowledge the message after performing computation
       chan.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
