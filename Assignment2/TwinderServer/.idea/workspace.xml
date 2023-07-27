@@ -10,41 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Assignment3/Client/out/artifacts/Client_jar/output_concurrent_2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Config/GETConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Config/SwipeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Request/GETRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/.idea/runConfigurations/TwinderServer_GET.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/DynamoDB/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/output_concurrent_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/output_concurrent_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Analyzer/OutputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Analyzer/OutputGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Analyzer/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Analyzer/Writer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Client/Client1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Client/Client1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Client/Client2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Client/Client2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Config/POSTConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Request/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/Client/src/main/java/Request/RequestThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/QueueConsumer1/out/artifacts/QueueConsumer1_jar/QueueConsumer1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/QueueConsumer1/out/artifacts/QueueConsumer1_jar/QueueConsumer1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/QueueConsumer1/src/main/java/Config/ConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/QueueConsumer1/src/main/java/Config/ConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/QueueConsumer1/src/main/java/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/QueueConsumer1/src/main/java/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment3/ClientUML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment3/Consumer-UML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment3/GET-Server-UML.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer/out/artifacts/TwinderServer/TwinderServer.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer/out/artifacts/TwinderServer/TwinderServer.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer/src/main/java/Config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer/src/main/java/Config/ServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer/src/main/java/Swipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer/src/main/java/Swipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/.idea/artifacts/TwinderServer_GET.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/.idea/artifacts/TwinderServer_GET.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/out/artifacts/TwinderServer_GET/TwinderServer_GET.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/out/artifacts/TwinderServer_GET/TwinderServer_GET.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/Config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/Config/ServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/DynamoDB/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/DynamoDB/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/Matches.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/Matches.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/main/java/Stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/src/test/java/neu/cs6650/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/target/classes/neu/cs6650/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/target/classes/neu/cs6650/Config/ServerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/target/classes/neu/cs6650/DependencyFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/target/classes/neu/cs6650/Matches.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/target/classes/neu/cs6650/Stats.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment3/TwinderServer_GET/target/test-classes/neu/cs6650/AppTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +40,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="2QqcDK5LjfSuVn9l3seLCEeOC5o" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -83,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/Assignment2/TwinderServer",
+    "last_opened_file_path": "D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/Assignment3/TwinderServer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,6 +63,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15625",
     "project.structure.side.proportion": "0.17844728",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -132,6 +104,7 @@
       <workItem from="1688946002471" duration="2650000" />
       <workItem from="1688948845573" duration="688000" />
       <workItem from="1690426725375" duration="2765000" />
+      <workItem from="1690482560547" duration="86000" />
     </task>
     <servers />
   </component>
@@ -151,5 +124,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
