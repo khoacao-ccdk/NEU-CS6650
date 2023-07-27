@@ -1,7 +1,8 @@
 package Request;
 
 import Body.SwipeDetails;
-import Config.ClientConfig;
+import Config.POSTConfig;
+import Config.SwipeConfig;
 import com.google.gson.Gson;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CountDownLatch;
@@ -76,7 +77,7 @@ public class RequestThread implements Runnable {
     //Set up request
     AsyncRequestProducer postReq = AsyncRequestBuilder.post()
         .setUri(String.format("%s/swipe/%s",
-            ClientConfig.REMOTE_BASE_URL,
+            POSTConfig.URL,
             leftorright))
         .addHeader("Accept", "application/json")
         .addHeader("Content-type", "application/json")
@@ -92,7 +93,7 @@ public class RequestThread implements Runnable {
    * @param postReq
    */
   private void post(AsyncRequestProducer postReq ){
-    for (int i = 0; i <= ClientConfig.NUM_RETRY; i++) {
+    for (int i = 0; i <= SwipeConfig.NUM_RETRY; i++) {
       start = System.currentTimeMillis();
       //Starts sending request
       AsyncResponseConsumer<SimpleHttpResponse> consumer = SimpleResponseConsumer.create();
@@ -139,8 +140,8 @@ public class RequestThread implements Runnable {
    */
   private String getRandomSwipeBody() {
     ThreadLocalRandom rand = ThreadLocalRandom.current();
-    int swiper = rand.nextInt(ClientConfig.SWIPER_RANGE) + 1;
-    int swipee = rand.nextInt(ClientConfig.SWIPEE_RANGE) + 1;
+    int swiper = rand.nextInt(SwipeConfig.SWIPER_RANGE) + 1;
+    int swipee = rand.nextInt(SwipeConfig.SWIPEE_RANGE) + 1;
 
     int leftLimit = 48; // numeral '0'
     int rightLimit = 122; // letter 'z'
@@ -148,7 +149,7 @@ public class RequestThread implements Runnable {
     //Generate a random comment
     String comment = rand.ints(leftLimit, rightLimit + 1)
         .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
-        .limit(ClientConfig.COMMENT_LENGTH)
+        .limit(SwipeConfig.COMMENT_LENGTH)
         .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
         .toString();
 

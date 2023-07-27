@@ -36,8 +36,8 @@ public class ProducerThread implements Runnable {
       Channel channel = connectionPool.poll();
 
       //Public message to the 2 queues
-      channel.basicPublish("", ServerConfig.QUEUE_2_NAME, null, message);
       channel.basicPublish("", ServerConfig.QUEUE_1_NAME, null, message);
+      //channel.basicPublish("", ServerConfig.QUEUE_1_NAME, null, message);
 
       //Put the connection back to the pool when finished
       connectionPool.offer(channel);

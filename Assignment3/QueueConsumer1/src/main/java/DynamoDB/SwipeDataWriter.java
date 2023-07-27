@@ -77,9 +77,6 @@ public class SwipeDataWriter implements Runnable {
    * Create and send a transaction request to dynamoDB
    */
   private void sendTransaction() {
-    String updateExpression = "SET leftswipe = if_not_exists(leftswipe, :startValue) + :leftinc, "
-        + "rightswipe = if_not_exists(rightswipe, :startValue) + :rightinc";
-
     try {
       Collection<TransactWriteItem> actions = new ArrayList<>();
       for (int swiperId : swiperSet) {
@@ -112,11 +109,7 @@ public class SwipeDataWriter implements Runnable {
 
     // Run the transaction and process the result.
     try {
-      System.out.println("Sending...");
-      long start = System.currentTimeMillis();
       dynamoDbClient.transactWriteItems(updateCountTransaction);
-      long latency = System.currentTimeMillis() - start;
-      System.out.println(String.format("Transaction Successful, that took %d milliseconds", latency));
     } catch (ResourceNotFoundException rnf) {
       System.err.println("One of the table involved in the transaction is not found" + rnf.getMessage());
     } catch (InternalServerErrorException ise) {

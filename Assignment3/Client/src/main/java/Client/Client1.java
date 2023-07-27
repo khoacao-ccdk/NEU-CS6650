@@ -1,6 +1,6 @@
 package Client;
 
-import Config.ClientConfig;
+import Config.POSTConfig;
 import Request.RequestThread;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -16,16 +16,16 @@ public class Client1 {
 
   public static void main(String[] args) {
     //Set up variables
-    ExecutorService threadPool = Executors.newFixedThreadPool(ClientConfig.NUM_THREADS);
+    ExecutorService threadPool = Executors.newFixedThreadPool(POSTConfig.NUM_THREADS);
 
     AtomicInteger successCounter = new AtomicInteger(0);
     AtomicInteger failCounter = new AtomicInteger(0);
 
-    CountDownLatch latch = new CountDownLatch(ClientConfig.REQUEST_NUM);
+    CountDownLatch latch = new CountDownLatch(POSTConfig.REQUEST_NUM);
 
     PoolingAsyncClientConnectionManager cm = new PoolingAsyncClientConnectionManager();
-    cm.setMaxTotal(ClientConfig.MAX_TOTAL_CONN);
-    cm.setDefaultMaxPerRoute(ClientConfig.MAX_PER_ROUTE);
+    cm.setMaxTotal(POSTConfig.MAX_TOTAL_CONN);
+    cm.setDefaultMaxPerRoute(POSTConfig.MAX_PER_ROUTE);
 
     RequestConfig requestConfig = RequestConfig.custom()
         //.setResponseTimeout(3000, TimeUnit.MILLISECONDS)
@@ -41,7 +41,7 @@ public class Client1 {
     long start = System.currentTimeMillis();
 
     //Start sending requests
-    for (int i = 0; i < ClientConfig.REQUEST_NUM; i++) {
+    for (int i = 0; i < POSTConfig.REQUEST_NUM; i++) {
       threadPool.execute(new RequestThread(
           successCounter,
           failCounter,
@@ -69,7 +69,7 @@ public class Client1 {
     }
 
     int runTime = (int) TimeUnit.MILLISECONDS.toSeconds(end - start);
-    double throughput = 1.0 * ClientConfig.REQUEST_NUM / runTime;
+    double throughput = 1.0 * POSTConfig.REQUEST_NUM / runTime;
 
     StringBuilder sb = new StringBuilder()
         .append(successCounter).append(" requests succeeded").append(System.lineSeparator())

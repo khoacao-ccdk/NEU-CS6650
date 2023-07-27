@@ -3,9 +3,9 @@ import SwipeQueue.SwipeConsumer;
 public class Consumer {
   public static void main(String[] args){
     //Set aws credentials
-    System.setProperty("aws.accessKeyId", "ASIATYHSEPEYYWGLVHNR");
-    System.setProperty("aws.secretAccessKey", "iXYTU2Jqa4h0vKzUoBG+J2aKWZgUP4+nNLfZ8M5I");
-    System.setProperty("aws.sessionToken", "FwoGZXIvYXdzEJL//////////wEaDBSJQA9wFpJpZt+E+iLJAeixT75PcobOQEXyPFmOHcjECd+y8N+6YeB03wTT0onODgiqzcrnrHv+++uog/XGBP/nOTzUM0pZfh9eeCfL1zZZ5YcHevN05ZrOXgltJXuEy2isHATRNSb1sXb1H6l1fl9JCRQyrmoha772r9GuVuWmzX20y3P3S/KyHa8MpollZJ/hvkTGd8HIHt0CNDNzx1+NPAAMa+SPe5mhf277SjsPt6BEwV4kFOJOPh+BfJZqcWXLYUx82LMPXiQJ0ZC5AOR7eqy66hNH8Cjyz/qlBjItMNEFX8bEX3wdzJfMgYHRqnqXhnD8dt/wD/K6VhD/8L8sDgGzGtBNapTM0uD8");
+    System.setProperty("aws.accessKeyId", "ASIATYHSEPEY7WANMBPK");
+    System.setProperty("aws.secretAccessKey", "OVMiFrAb2jN/DVUfVg81Pn1PkRaVkpJPpagucv5a");
+    System.setProperty("aws.sessionToken", "FwoGZXIvYXdzEMz//////////wEaDHgynDcyCnhsoyB5FyLJAUiExpu6Sv4/QLWTW0YdGpx0akNtxtgySJRVBqGlUgCRysHPckpeLtdMyyOCQEg3PSQ04BrVwbgnXll46SA7ZkbAx4HCXkTe0dv+FWE0sEOjyR5B2oh9lNM/L4gKmMhzHDYA5tBzt2qANtS10TLV+z5buWlH4HE7paXbKYWzSJzjeusU73APF8q3QjOdYRna+75Y8NUBwSOCK2Z0cHsGVcsZM6Fjj1hp4wwACtoOt1R/obIJ/5+c+hQuluskNJhijLa0OezxQkvzcijirIemBjItCRTrPGtrck+91I7DJhdeRyVQIaNveWZ3p4qT9hqPkNO8FsLWlMnddtQ54aGg");
 
     SwipeConsumer consumer = new SwipeConsumer();
     consumer.start();

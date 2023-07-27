@@ -10,7 +10,7 @@ public class ConsumerConfig {
   /**
    * Number of connections opened towards the message queue host - also used to allocate threads
    */
-  public static final int NUM_CONNECTIONS = 50;
+  public static final int NUM_CONNECTIONS = 300;
 
   /**
    * RabbitMQ Host

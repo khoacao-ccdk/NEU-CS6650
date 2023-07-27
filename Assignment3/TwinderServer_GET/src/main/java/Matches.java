@@ -21,9 +21,9 @@ public class Matches extends HttpServlet {
     super.init();
 
     //Set aws credentials
-    System.setProperty("aws.accessKeyId", "ASIATYHSEPEYYWGLVHNR");
-    System.setProperty("aws.secretAccessKey", "iXYTU2Jqa4h0vKzUoBG+J2aKWZgUP4+nNLfZ8M5I");
-    System.setProperty("aws.sessionToken", "FwoGZXIvYXdzEJL//////////wEaDBSJQA9wFpJpZt+E+iLJAeixT75PcobOQEXyPFmOHcjECd+y8N+6YeB03wTT0onODgiqzcrnrHv+++uog/XGBP/nOTzUM0pZfh9eeCfL1zZZ5YcHevN05ZrOXgltJXuEy2isHATRNSb1sXb1H6l1fl9JCRQyrmoha772r9GuVuWmzX20y3P3S/KyHa8MpollZJ/hvkTGd8HIHt0CNDNzx1+NPAAMa+SPe5mhf277SjsPt6BEwV4kFOJOPh+BfJZqcWXLYUx82LMPXiQJ0ZC5AOR7eqy66hNH8Cjyz/qlBjItMNEFX8bEX3wdzJfMgYHRqnqXhnD8dt/wD/K6VhD/8L8sDgGzGtBNapTM0uD8");
+    System.setProperty("aws.accessKeyId", ServerConfig.AWS_ACCESS_KEY);
+    System.setProperty("aws.secretAccessKey", ServerConfig.AWS_SECRET_ACCESS_KEY);
+    System.setProperty("aws.sessionToken", ServerConfig.AWS_SESSION_TOKEN);
   }
 
 
@@ -52,7 +52,12 @@ public class Matches extends HttpServlet {
     //Retrieve from DynamoDB
     int userId = Integer.parseInt(urlParts[1]);
     DAO dao = new DAO(userId);
+
+    long funcStart = System.currentTimeMillis();
     List<Integer> matches = dao.getMatches();
+    long funcLatency = System.currentTimeMillis() - funcStart;
+    System.out.println("Function matches took " + funcLatency + " ms");
+
     String responseMsg;
     if(matches == null) {
       response.setStatus(HttpServletResponse.SC_NOT_FOUND);

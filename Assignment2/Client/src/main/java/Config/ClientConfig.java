@@ -9,10 +9,8 @@ public final class ClientConfig {
   /**
    * The BaseURL to send request to server
    *
-   * Single instance URL: http://44.236.118.30:8080/TwinderServer
-   * 2 instances with ELB: http://TwinderServer-ELB-1396322766.us-west-2.elb.amazonaws.com:8080/TwinderServer
    */
-  public static final String REMOTE_BASE_URL = "http://TwinderServer-ELB-1396322766.us-west-2.elb.amazonaws.com:8080/TwinderServer";
+  public static final String REMOTE_BASE_URL = "http://Twinder-ELB-457779432.us-west-2.elb.amazonaws.com:8080/TwinderServer";
 
   /**
    * How many request the client should send to server
@@ -22,12 +20,12 @@ public final class ClientConfig {
   /**
    * Number of threads the client will use
    */
-  public static final int NUM_THREADS = 200;
+  public static final int NUM_THREADS = 300;
 
   /**
    * Swiper's id range
    */
-  public static final int SWIPER_RANGE = 100;
+  public static final int SWIPER_RANGE = 50000;
 
   /**
    * Swipee's id range

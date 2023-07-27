@@ -1,6 +1,7 @@
 import Config.ServerConfig;
 import DynamoDB.DAO;
 import java.io.IOException;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,16 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/stats/*")
 public class Stats extends HttpServlet {
+
+  @Override
+  public void init() throws ServletException {
+    super.init();
+
+    //Set aws credentials
+    System.setProperty("aws.accessKeyId", ServerConfig.AWS_ACCESS_KEY);
+    System.setProperty("aws.secretAccessKey", ServerConfig.AWS_SECRET_ACCESS_KEY);
+    System.setProperty("aws.sessionToken", ServerConfig.AWS_SESSION_TOKEN);
+  }
 
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -39,7 +50,10 @@ public class Stats extends HttpServlet {
     //Retrieve from DynamoDB
     int userId = Integer.parseInt(urlParts[1]);
     DAO dao = new DAO(userId);
+    long funcStart = System.currentTimeMillis();
     int[] stats = dao.getStats();
+    long funcLatency = System.currentTimeMillis() - funcStart;
+    System.out.println("Function stats took " + funcLatency + " ms");
 
     String responseMsg;
 
@@ -47,7 +61,6 @@ public class Stats extends HttpServlet {
     if(stats == null) {
       response.setStatus(HttpServletResponse.SC_NOT_FOUND);
       responseMsg = "User not found";
-      response.getWriter().write(responseMsg);
     }
     else {
       response.setStatus(HttpServletResponse.SC_OK);
@@ -55,8 +68,8 @@ public class Stats extends HttpServlet {
 
       //Build the response message
       responseMsg = new StringBuilder("{")
-          .append("\"numLlikes\": ").append(stats[0])
-          .append(", \"numDislikes\": ").append(stats[1])
+          .append("\"numLikes\": ").append(stats[1])
+          .append(", \"numDislikes\": ").append(stats[0])
           .append("}").toString();
 
     }

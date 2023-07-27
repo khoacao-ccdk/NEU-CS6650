@@ -1,6 +1,6 @@
 package Analyzer;
 
-import Config.ClientConfig;
+import Config.POSTConfig;
 import Request.RequestOutput;
 import com.opencsv.CSVWriter;
 import java.io.BufferedWriter;
@@ -63,7 +63,7 @@ public class Writer implements Runnable {
 
   @Override
   public void run() {
-    while (numRows < ClientConfig.REQUEST_NUM) {
+    while (numRows < POSTConfig.REQUEST_NUM) {
       RequestOutput row = writeQueue.poll();
 
       //In case there's no record yet, sleep the thread for a while

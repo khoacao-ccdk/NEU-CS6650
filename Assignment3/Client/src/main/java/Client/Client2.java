@@ -2,7 +2,8 @@ package Client;
 
 import Analyzer.Analyzer;
 import Analyzer.Writer;
-import Config.ClientConfig;
+import Config.POSTConfig;
+import Request.GETRequest;
 import Request.RequestOutput;
 import Request.RequestThread;
 import Analyzer.OutputGenerator;
@@ -18,19 +19,20 @@ import org.apache.hc.client5.http.impl.async.HttpAsyncClients;
 import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManager;
 
 public class Client2 {
-  public static void main(String[] args){
+
+  public static void main(String[] args) {
     //Set up variables
-    ExecutorService threadPool = Executors.newFixedThreadPool(ClientConfig.NUM_THREADS);
+    ExecutorService threadPool = Executors.newFixedThreadPool(POSTConfig.NUM_THREADS);
 
     AtomicInteger successCounter = new AtomicInteger(0);
     AtomicInteger failCounter = new AtomicInteger(0);
     ConcurrentLinkedQueue<RequestOutput> writeQueue = new ConcurrentLinkedQueue<>();
 
-    CountDownLatch latch = new CountDownLatch(ClientConfig.REQUEST_NUM);
+    CountDownLatch latch = new CountDownLatch(POSTConfig.REQUEST_NUM);
 
     PoolingAsyncClientConnectionManager cm = new PoolingAsyncClientConnectionManager();
-    cm.setMaxTotal(ClientConfig.MAX_TOTAL_CONN);
-    cm.setDefaultMaxPerRoute(ClientConfig.MAX_PER_ROUTE);
+    cm.setMaxTotal(POSTConfig.MAX_TOTAL_CONN);
+    cm.setDefaultMaxPerRoute(POSTConfig.MAX_PER_ROUTE);
 
     RequestConfig requestConfig = RequestConfig.custom()
         //.setResponseTimeout(3000, TimeUnit.MILLISECONDS)
@@ -46,11 +48,11 @@ public class Client2 {
     long start = System.currentTimeMillis();
 
     Thread writeThread = new Thread(
-        new Writer(writeQueue, Writer.CONCURRENT_FILE_NAME_2, ClientConfig.NUM_THREADS));
+        new Writer(writeQueue, Writer.CONCURRENT_FILE_NAME_2, POSTConfig.NUM_THREADS));
     writeThread.start();
 
     //Start sending requests
-    for(int i = 0; i < ClientConfig.REQUEST_NUM; i++){
+    for (int i = 0; i < POSTConfig.REQUEST_NUM; i++) {
       threadPool.execute(new RequestThread(
           successCounter,
           failCounter,
@@ -60,10 +62,19 @@ public class Client2 {
       ));
     }
 
-    //Wait for all threads to finish execution
+    //Start the get thread
+    GETRequest getRequest = new GETRequest(httpClient);
+    Thread t = new Thread(getRequest);
+    t.start();
+
+    //Wait for all threads to finish execution, then terminate the GET thread too
     try {
       latch.await();
+      System.out.println("POST done!");
       writeThread.join();
+      getRequest.stop();
+      t.join(100);
+      System.out.println("GET done!");
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
@@ -75,6 +86,7 @@ public class Client2 {
       cm.close();
       threadPool.shutdown();
       threadPool.awaitTermination(1000, TimeUnit.MILLISECONDS);
+
     } catch (InterruptedException e) {
       throw new RuntimeException(e);
     }
@@ -95,5 +107,17 @@ public class Client2 {
         failCounter.get(),
         runTime);
     System.out.println(output.getOuput());
+
+    //Print output for GET requests
+    String getOutput = new StringBuilder()
+        .append("GET Request result:").append(System.lineSeparator())
+        .append("Min response time: ")
+        .append(getRequest.getMinLatency()).append(" milliseconds").append(System.lineSeparator())
+        .append("Max response time: ")
+        .append(getRequest.getMaxLatency()).append(" milliseconds").append(System.lineSeparator())
+        .append("Average response time: ")
+        .append(getRequest.getAverageLatency()).append(" milliseconds").append(System.lineSeparator())
+        .toString();
+    System.out.println(getOutput);
   }
 }

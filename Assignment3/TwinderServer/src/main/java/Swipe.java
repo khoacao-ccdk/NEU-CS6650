@@ -148,7 +148,7 @@ public class Swipe extends HttpServlet {
         Channel channel = producer.getConnection();
 
         //Publish message to queue 1
-        channel.basicPublish("", ServerConfig.QUEUE_1_NAME, MessageProperties.PERSISTENT_TEXT_PLAIN, message);
+        channel.basicPublish("", ServerConfig.QUEUE_1_NAME, MessageProperties.MINIMAL_PERSISTENT_BASIC, message);
 
         producer.putConnection(channel);
     }

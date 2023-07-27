@@ -1,7 +1,6 @@
 package Analyzer;
 
-import Analyzer.Analyzer;
-import Config.ClientConfig;
+import Config.POSTConfig;
 
 public class OutputGenerator {
 
@@ -29,7 +28,7 @@ public class OutputGenerator {
    * @return a String represents the output to be displayed
    */
   public String getOuput() {
-    double throughput = 1.0 * ClientConfig.REQUEST_NUM / runTime;
+    double throughput = 1.0 * POSTConfig.REQUEST_NUM / runTime;
 
     StringBuilder sb = new StringBuilder()
         .append(successCounter).append(" requests succeeded").append(System.lineSeparator())

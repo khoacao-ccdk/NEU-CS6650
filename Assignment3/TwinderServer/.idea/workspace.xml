@@ -10,34 +10,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca592c6e-10ed-41c8-8217-3cc3f567e685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/DynamoDB/MatchListWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/output_concurrent_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/GETConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/SwipeConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/Request/GETRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/runConfigurations/TwinderServer_GET.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/DynamoDB/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/Client/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/Client/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/Client/src/main/java/Config/ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/QueueConsumer1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/QueueConsumer1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/TwinderServer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/TwinderServer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/TwinderServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/TwinderServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/TwinderServer/out/artifacts/TwinderServer/TwinderServer.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/TwinderServer/out/artifacts/TwinderServer/TwinderServer.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/TwinderServer/src/main/java/Config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/TwinderServer/src/main/java/Config/ServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2/TwinderServer/src/main/java/MessageQueue/ProducerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2/TwinderServer/src/main/java/MessageQueue/ProducerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/output_concurrent_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/output_concurrent_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Analyzer/OutputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Analyzer/OutputGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Analyzer/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Analyzer/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Client/Client1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Client/Client1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Client/Client2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Client/Client2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Config/ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Config/POSTConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/Request/RequestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/Request/RequestThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/.idea/artifacts/QueueConsumer1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/.idea/artifacts/QueueConsumer1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QueueConsumer1/out/artifacts/QueueConsumer1_jar/QueueConsumer1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/out/artifacts/QueueConsumer1_jar/QueueConsumer1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Config/AWSDependencyFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Config/ConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Config/ConsumerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/DynamoDB/SwipeCounterWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/DynamoDB/SwipeCounterWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/ConsumerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/ConsumerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/SwipeConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/SwipeQueue/SwipeConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/.idea/aws.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Body/Swipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Data/Swipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Config/ConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Config/ConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/ConsumerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/ConsumerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/SwipeConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer2/src/main/java/SwipeQueue/SwipeConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/DynamoDB/SwipeDataWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QueueConsumer1/src/main/java/DynamoDB/SwipeDataWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TwinderServer/TwinderServer.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TwinderServer/TwinderServer.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/ServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MessageQueue/QueueProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MessageQueue/QueueProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Swipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Swipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/.idea/artifacts/TwinderServer_GET.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/artifacts/TwinderServer_GET.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/out/artifacts/TwinderServer_GET/TwinderServer_GET.war" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/out/artifacts/TwinderServer_GET/TwinderServer_GET.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Config/ServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/DynamoDB/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/DynamoDB/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Matches.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Matches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TwinderServer_GET/src/main/java/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/src/test/java/neu/cs6650/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/target/classes/neu/cs6650/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/target/classes/neu/cs6650/Config/ServerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/target/classes/neu/cs6650/DependencyFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/target/classes/neu/cs6650/Matches.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/target/classes/neu/cs6650/Stats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TwinderServer_GET/target/test-classes/neu/cs6650/AppTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +93,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/Assignment3/TwinderServer",
+    "last_opened_file_path": "D:/NEU/Summer_2023/CS6650_DistributedSystem/Projects/NEU-CS6650/Assignment2/Client",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15625",
     "project.structure.side.proportion": "0.17844728",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
@@ -132,6 +149,8 @@
       <workItem from="1689972117919" duration="1172000" />
       <workItem from="1690143108807" duration="3854000" />
       <workItem from="1690222732040" duration="50000" />
+      <workItem from="1690407760347" duration="1309000" />
+      <workItem from="1690411901918" duration="11371000" />
     </task>
     <servers />
   </component>

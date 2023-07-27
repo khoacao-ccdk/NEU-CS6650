@@ -5,12 +5,12 @@ public class ServerConfig {
   /**
    * Swiper's id range
    */
-  public static final int SWIPER_RANGE = 5000;
+  public static final int SWIPER_RANGE = 50000;
 
   /**
    * Swipee's id range
    */
-  public static final int SWIPEE_RANGE = 1000000;
+  public static final int SWIPEE_RANGE = 50000;
 
   /**
    * Length of a randomly generated comment
@@ -23,7 +23,7 @@ public class ServerConfig {
   public static final int NUM_CONNECTIONS = 100;
 
   /**
-   * RabbitMQ Host
+   * RabbitMQ Host 50.112.70.179
    */
   public static final String QUEUE_HOST = "50.112.70.179";
 

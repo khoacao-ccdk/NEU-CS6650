@@ -32,12 +32,12 @@ public class DAO {
    */
   public DAO(int swiperId) {
     this.swiperId = swiperId;
-    SystemPropertyCredentialsProvider cred = SystemPropertyCredentialsProvider.create();
-    this.dynamoDbClient = DynamoDbClient.builder()
-        .credentialsProvider(cred)
-        .region(Region.US_WEST_2)
-        .httpClient(UrlConnectionHttpClient.builder().build())
-        .build();
+//    SystemPropertyCredentialsProvider cred = SystemPropertyCredentialsProvider.create();
+//    this.dynamoDbClient = DynamoDbClient.builder()
+//        .credentialsProvider(cred)
+//        .region(Region.US_WEST_2)
+//        .httpClient(UrlConnectionHttpClient.builder().build())
+//        .build();
 
     //Create a keymap
     keyMap = new HashMap<>();
@@ -49,6 +49,7 @@ public class DAO {
    * @return a List of Integer represents the potential matches
    */
   public List<Integer> getMatches() {
+    this.dynamoDbClient = ConnectionManager.getInstance().getConnection();
     GetItemRequest request = GetItemRequest.builder()
         .tableName(ServerConfig.DYNAMO_TABLE_NAME)
         .key(keyMap)
@@ -58,8 +59,9 @@ public class DAO {
 
     // Send the request to DynamoDB and retrieve the response
     GetItemResponse response = dynamoDbClient.getItem(request);
+    List<Integer> matches = null;
     if (response.hasItem()) {
-      List<Integer> matches = new ArrayList<>();
+      matches = new ArrayList<>();
 
       //Extract the list property from the response
       AttributeValue attributeValue = response.item().get(ServerConfig.MATCHES_COL_NAME);
@@ -70,11 +72,9 @@ public class DAO {
           matches.add(Integer.parseInt(item.n()));
         }
       }
-      return matches;
-    } else {
-      //In case the given id's not in the dynamodb, return a null list to signal this
-      return null;
     }
+    ConnectionManager.getInstance().putConnection(this.dynamoDbClient);
+    return matches;
   }
 
   /**
@@ -82,6 +82,7 @@ public class DAO {
    * has performed
    */
   public int[] getStats() {
+    this.dynamoDbClient = ConnectionManager.getInstance().getConnection();
     GetItemRequest request = GetItemRequest.builder()
         .tableName(ServerConfig.DYNAMO_TABLE_NAME)
         .key(keyMap)
@@ -91,23 +92,25 @@ public class DAO {
         .build();
 
     // Send the request to DynamoDB and retrieve the response
+    long startReq = System.currentTimeMillis();
     GetItemResponse response = dynamoDbClient.getItem(request);
+    long reqLatency = System.currentTimeMillis() - startReq;
+    System.out.println("Request to DynamoDB took: " + reqLatency + "ms");
+    int[] result = null;
     if (response.hasItem()) {
-
       //Extract the list property from the response
       AttributeValue numLeftSwipes = response.item().get(ServerConfig.LEFT_SWIPE_COL_NAME);
       AttributeValue numRightSwipes = response.item().get(ServerConfig.RIGHT_SWIPE_COL_NAME);
 
       //Construct the result array
-      int[] result = new int[]{
+      result = new int[]{
           Integer.parseInt(numLeftSwipes.n()),
           Integer.parseInt(numRightSwipes.n())
       };
-
-      return result;
-    } else {
-      //In case the given id's not in the dynamodb, return a null array to signal this
-      return null;
     }
+
+    ConnectionManager.getInstance().putConnection(this.dynamoDbClient);
+      //In case the given id's not in the dynamodb, return a null array to signal this
+      return result;
   }
 }
