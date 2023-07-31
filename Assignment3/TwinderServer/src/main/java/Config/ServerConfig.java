@@ -27,7 +27,7 @@ public class ServerConfig {
    *
    * Remote host IP: 50.112.70.179
    */
-  public static final String QUEUE_HOST = "50.112.70.179";
+  public static final String QUEUE_HOST = "localhost";
 
   /**
    * RabbitMQ Port
